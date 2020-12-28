@@ -27,15 +27,18 @@ body {
 	box-shadow: 0 10px 10px 10px rgba(0,0,0,0.2);
 }
 
-.drink-ingredients {
+.drink-text {
 	font-size: 2.75rem;
 }
 
+.long-quote {
+	font-size: 2rem;
+}
 .fa-cocktail {
-	font-size: 1.75rem;
+	font-size: 4rem;
 }
 
-.quote-author {
+.drink-igredients {
 	margin-top: 15px;
 	font-size: 2rem;
 	font-style: italic;
@@ -67,7 +70,7 @@ button:hover {
 
 button:active {
 	transform:translate(0rem, 0.3rem);
-	box-shadow: 0rem 0.1rem rgba(255, 191, 0, 0.7);
+	box-shadow: 0rem 0rem;
 }
 
 .twitter-button:hover {
