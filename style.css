@@ -96,11 +96,11 @@ ul, li {
 /* Media Query: Tablet or smaller */
 
 @media screen and (max-width:1000px) {
-	.quote-container {
+	.drink-container {
 		margin: auto 10px;
 	}
 
-	.quote-text {
+	.drink-text {
 		font-size: 2.5rem;
 	}
 }
