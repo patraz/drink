@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quote Generator</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="quote-container" id="quote-container">
+		<!-- Quote element -->
+		<div class="quote-text">
+			<i class="fas fa-cocktail"></i>
+			<span id ="quote">Drink that I shoud get tonight is...</span><br><span id="drink"></span>
+
+		</div>
+		<!-- author element -->
+		<div class="drink-ingredients">
+			<div id="ingredients">
+				<ul id='list'></ul>
+				<ul id='list2'></ul>
+			</div>
+		</div>
+		<!-- buttons -->
+		<div class="button-container">
+			<button class="twitter-button" id="twitter" title = "Tweet this!">
+				<i class="fab fa-twitter"></i>		
+			</button>
+			<button id="new-drink">New Drink</button>
+		</div>
+	</div>
+	<!-- script -->
+	<script src="script.js"></script>
+</body>
+
+</html>
