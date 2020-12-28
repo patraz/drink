@@ -70,7 +70,6 @@ function deleteLiGetDrink() {
     getDrink();
 }
 
-// On Load
 getDrink();
 
 
