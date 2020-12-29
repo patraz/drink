@@ -7,11 +7,31 @@ const listElements = document.getElementsByTagName("li")
 const lists = document.querySelectorAll("ul")
 const drink = document.getElementById("drink")
 const intro = document.getElementById("quote")
+const loader = document.getElementById('loader')
+const drinkContainer = document.getElementById('drink-container')
+
+console.log(drinkContainer)
+console.log(loader)
+
+// Show loading
+function loading() {
+    loader.hidden = false;
+    drinkContainer.hidden = true;
+}
+
+function complete() {
+    if (!loader.hidden) {
+        drinkContainer.hidden = false;
+        loader.hidden = true;
+    }
+}
+
 
 console.log(listElements)
 
 // Get Drink  & ingredients  from API
 async function getDrink() {
+    loading()
     const apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
     try {
         const response = await fetch(apiUrl);
@@ -21,7 +41,8 @@ async function getDrink() {
         const drinkId = drinkObj.idDrink
         console.log(data.drinks[0])
         const arrDrinkObj = Object.entries(drinkObj)
-        for (thing in drinkObj) {
+        for (thing in
+             drinkObj) {
             for (let i = 0; i<15; i++) {
                 if (thing === `strIngredient${[i]}` && drinkObj[thing]!== null) {                     
                     const ingr = document.createTextNode(`${drinkObj[thing]}`)
@@ -36,7 +57,7 @@ async function getDrink() {
                     
                 }
             }
-        }
+        } complete();
     } catch (error) {
         console.log('no drink', error);
     }
