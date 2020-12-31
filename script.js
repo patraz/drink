@@ -9,9 +9,20 @@ const drink = document.getElementById("drink")
 const intro = document.getElementById("quote")
 const loader = document.getElementById('loader')
 const drinkContainer = document.getElementById('drink-container')
+let input = document.getElementById("input")
+const convertBtn = document.getElementById('convert')
+const result = document.getElementById('oz-result')
 
 console.log(drinkContainer)
 console.log(loader)
+
+console.log(input)
+
+function convert() {
+    let oz = input.value *  29.57;
+    console.log(oz)
+    result.innerText = `${oz} ml`
+}
 
 // Show loading
 function loading() {
@@ -78,8 +89,9 @@ function deleteLiGetDrink() {
 
 
 // Getting new drink by using the button
-
 drinkBtn.addEventListener('click', deleteLiGetDrink)
+
+convertBtn.addEventListener('click', convert)
 
 // on load
 getDrink();

@@ -31,9 +31,6 @@ body {
 	font-size: 2.75rem;
 }
 
-.long-quote {
-	font-size: 2rem;
-}
 .fa-cocktail {
 	font-size: 4rem;
 }
@@ -46,9 +43,13 @@ body {
 }
 
 .button-container {
-	margin-top: 15px;
 	display: flex;
 	justify-content: center;
+}
+
+p {
+	margin: 10px 0;
+	font-size: 2rem;
 }
 
 button {
@@ -58,7 +59,7 @@ button {
 	border: none;
 	border-radius: 10px;
 	color:rgb(255, 146, 0);
-	background:rgb(26, 26, 208);
+	background:#1e1eeeb2;
 	outline: none;
 	padding :0 1.5rem;
 	box-shadow: 0rem 0.3rem rgba(255, 191, 0, 0.4);
@@ -71,6 +72,18 @@ button:hover {
 button:active {
 	transform:translate(0rem, 0.3rem);
 	box-shadow: 0rem 0rem;
+}
+
+hr {
+	border-color: rgb(255, 146, 0);
+	background-color: rgb(255, 146, 0);
+}
+
+
+#convert {
+	height: 25px;
+	font-size: 1rem;
+	padding: 0 0.5rem;
 }
 
 
