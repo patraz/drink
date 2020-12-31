@@ -18,6 +18,8 @@ console.log(loader)
 
 console.log(input)
 
+// converting oz to ml
+
 function convert() {
     let oz = input.value *  29.57;
     console.log(oz)
@@ -90,7 +92,11 @@ function deleteLiGetDrink() {
 
 // Getting new drink by using the button
 drinkBtn.addEventListener('click', deleteLiGetDrink)
-
+input.addEventListener("keypress", function(e) {
+    if (e.key === 'Enter') {
+        convert();
+    }
+})
 convertBtn.addEventListener('click', convert)
 
 // on load
