@@ -12,6 +12,10 @@ const drinkContainer = document.getElementById('drink-container')
 let input = document.getElementById("input")
 const convertBtn = document.getElementById('convert')
 const result = document.getElementById('oz-result')
+const photo = document.getElementById('photo')
+
+const imgContainer = document.createElement('img');
+
 
 console.log(drinkContainer)
 console.log(loader)
@@ -51,9 +55,13 @@ async function getDrink() {
         const data = await response.json();
         const drinkObj = data.drinks[0]
         drinkName.innerText = drinkObj.strDrink;
+        const drinkImg = drinkObj.strDrinkThumb;
         const drinkId = drinkObj.idDrink
-        console.log(data.drinks[0])
         const arrDrinkObj = Object.entries(drinkObj)
+        imgContainer.setAttribute('src', '')
+        imgContainer.setAttribute('width', '300px')
+        imgContainer.setAttribute('src', `${drinkImg}`)
+        photo.append(imgContainer)
         for (thing in
              drinkObj) {
             for (let i = 0; i<15; i++) {
